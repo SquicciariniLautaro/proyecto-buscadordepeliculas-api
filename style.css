@@ -1,0 +1,91 @@
+/* Reseteo básico para que todos los navegadores se vean igual */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    padding: 0; /* Quitamos el padding para que el encabezado toque los bordes */
+}
+
+/* --- ESTILOS DEL NUEVO ENCABEZADO --- */
+.encabezado {
+    background-color: #141414; /* Un color oscuro estilo Netflix */
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Sombra para separar del contenido */
+}
+
+.encabezado h1 {
+    color: #e50914; /* Color rojo para el título, puedes cambiarlo al que gustes */
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    letter-spacing: 2px; /* Separa un poco las letras */
+}
+
+#movie-input {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#search-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-btn:hover {
+    background-color: #0056b3;
+}
+
+/* --- CUADRÍCULA --- */
+
+#movies-grid {
+    display: grid;
+    /* Crea columnas de mínimo 200px. Si sobra espacio, se estiran equitativamente */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px; /* Espacio entre las tarjetas */
+    margin-top: 30px;
+    padding: 20px;
+}
+
+/* --- DISEÑO DE CADA TARJETA --- */
+
+.movie-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden; /* Esconde todo lo que sobresalga de los bordes curvos */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+    text-align: center;
+    transition: transform 0.2s; /* Animación suave para el hover */
+}
+
+.movie-card:hover {
+    transform: translateY(-10px); /* Hace que la tarjeta "salte" al pasar el mouse */
+}
+
+/* --- CONTROL DE LA IMAGEN --- */
+
+.movie-card img {
+    width: 100%; /* Ocupa todo el ancho de la tarjeta */
+    height: 300px; /* Fija una altura para que todas las tarjetas midan igual */
+    object-fit: cover; /* Recorta la imagen sin deformarla para que llene el espacio */
+}
+
+/* --- ESTILO DEL TÍTULO --- */
+
+.movie-card h3 {
+    font-size: 16px;
+    padding: 15px 10px;
+    color: #222;
+}
